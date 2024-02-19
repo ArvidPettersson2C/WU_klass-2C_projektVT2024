@@ -1,0 +1,37 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#grid_wrapper {
+    background-image: url();
+
+    display: grid;
+    grid-template-columns: auto minmax(4fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "nav hea"
+    "nav se1"
+
+    ;
+    gap: 20px;
+}
+
+#nav{
+    grid-area: nav;
+    size: 200px;
+    color: blue;
+}
+
+#header{
+    grid-area: hea;
+    size: auto;
+    color: red;
+}
+
+#section_1{
+    grid-area: se1;
+    size: auto;
+    color: blueviolet;
+}
