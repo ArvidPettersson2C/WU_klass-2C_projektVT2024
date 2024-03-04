@@ -9,10 +9,10 @@
 }
 #grid_wrapper {
     display: grid;
-    grid-template-columns: auto minmax(auto, 1fr);
-    grid-template-rows: 80px, 400px, 600px;
+    grid-template-columns: minmax(auto, 1fr) auto;
+    grid-template-rows: 80px, 50px, 600px;
     grid-template-areas: 
-    "nav hea"
+    "hea nav"
     "se1 se1"
     "se2 se2"
     ;
@@ -21,29 +21,36 @@
 
 #nav{
     grid-area: nav;
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 110px;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
 }
 
 #header{
     grid-area: hea;
-    height: 80px;
+    height: 110px;
     flex: auto;
     width: auto;
     background-color: red;
+    z-index: 5;
 }
 
 #section_1{
     grid-area: se1;
-    height: 300px;
-    background-color: blueviolet;
+    height: 400px;
+    background-image: url("../img/Child_playing.jpg");
+    background-size: cover;
 }
 
 #section_2{
     grid-area: se2;
     height: 500px;
     background-color: yellow;
+    z-index: 2;
 }
 /* styling av klass */
 .links_visible {
@@ -68,9 +75,12 @@
 .article_text {
     font-size: 1rem;
 }
-
+#header_link_list:link {
+    color: brown;
+    
+}
 /* styling av id */
-#link_list {
+#burger_link_list {
     background: var(--background_color);
     display: flex;
     flex-direction: column;
@@ -82,9 +92,11 @@
     list-style: none;
     z-index: 1;
     border: 1px solid grey;
+    background-color: grey;
 }
 
 #burger {
-    margin-right: 80px;
+    margin-right: 0px;
     cursor: pointer;
+    background-color: aqua;
 }
