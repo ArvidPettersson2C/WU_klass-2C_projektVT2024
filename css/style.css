@@ -3,100 +3,274 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
     --burgerline_width: 30px;
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
 }
-#grid_wrapper {
+/*-----grid-wrapper-Desktop------------------------------------------------------------------------------*/
+#grid_wrapper_hem {
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) auto;
-    grid-template-rows: 80px, 50px, 600px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px 600px;
     grid-template-areas: 
-    "hea nav"
     "se1 se1"
     "se2 se2"
     ;
     
 }
-
-#nav{
-    grid-area: nav;
-    height: 110px;
-    width: 110px;
-    background-color: blue;
+#grid_wrapper_om_oss {
+display: grid;
+    grid-template-columns: minmax(auto, 1fr) auto;
+    grid-template-rows: 80px, 50px, 600px;
+    grid-template-areas: 
+    "se3 se3"
+    "se3 se3"
+    ;
+}
+/*---------nav---------------------------------------------------------------------------*/
+nav {
+    height: 100px;
+    background-color: var(--background_color);
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    z-index: 5;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(0, 188, 188);
 }
 
-#header{
-    grid-area: hea;
-    height: 110px;
-    flex: auto;
-    width: auto;
-    background-color: red;
-    z-index: 5;
-}
-
-#section_1{
-    grid-area: se1;
-    height: 400px;
-    background-image: url("../img/Child_playing.jpg");
-    background-size: cover;
-}
-
-#section_2{
-    grid-area: se2;
-    height: 500px;
-    background-color: yellow;
-    z-index: 2;
-}
-/* styling av klass */
-.links_visible {
-    transform: translateY(500px);
-}
-
-.burger_line {
-    width: var(--burgerline_width);
-    height: var(--burgerline_height);
-    margin: var(--burgerline_margin);
-    background: darkgreen;
-    border-radius: 20%;
-    transition: all 0.5s;
-}
-
-.arrow_img {
-    width: 50px;
-    height: auto;
-    margin: 10px;
-} 
-
-.article_text {
-    font-size: 1rem;
-}
-#header_link_list:link {
-    color: brown;
-    
-}
-/* styling av id */
-#burger_link_list {
+/*------link list---------------------------------------------------------*/
+#link_list {
     background: var(--background_color);
     display: flex;
     flex-direction: column;
     height: 400px;
+    width: 150px;
     position: absolute;
-    top: -400px;
+    top: -436px;
     align-items: center;
     justify-content: space-around;
     list-style: none;
-    z-index: 1;
-    border: 1px solid grey;
-    background-color: grey;
+    transition: all 0.5s;
+    background-color: rgb(0, 188, 188);
+}
+
+.links_visible {
+    transform: translateY(535px);
+}
+
+#link_list a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+    width: 150px;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#link_list a:hover {
+    text-decoration: underline;
+    color:aqua;
+}
+
+
+/*-----styling id----------------------------------------------------------------------*/ 
+
+#bakgrundsbild_hem{ 
+    z-index: -1;
+    grid-area: se1;
+    padding-top: 100px;
+    padding-bottom: 300px;
+
+    background-color: rgb(163, 214, 214);
+    background-repeat: no-repeat;
+    background-image: url("/img/child_playing.jpg");
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+#nyheter{
+    grid-area: se2;
+    padding-top: 100px;
+    padding-left: 80px;
+}
+
+#om_oss_info{
+    grid-area: se3;
+}
+
+
+
+
+
+
+/*-----------Tags----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*----Hamburgermenyn-------------------------------------------------------------------------------------*/ 
+.burger_line {
+    width: var(--burgerline_width);
+    height: var(--burgerline_height);
+    margin: var(--burgerline_margin);
+    background: rgb(255, 255, 255);
+    border-radius: 20%;
+    transition: all 0.5s;
+}
+
+.burger_in_x_form #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_in_x_form #burger_line_1 {
+    transform: translateY(calc(var(--burgerline_height) + var(--burgerline_margin))) rotate(45deg);
+}
+
+.burger_in_x_form #burger_line_3 {
+    transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
 }
 
 #burger {
-    margin-right: 0px;
+    margin-right: 40px;
     cursor: pointer;
-    background-color: aqua;
+}
+/*-----Styling klass-----------------------------------------------------------------*/
+.footer{
+    background-color: teal;
+    width: 100%;
+    
+    
+}
+
+.footer_nav{
+    margin: 30px;
+    
+}
+
+.footer_nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.footer_nav ul li a{
+    color: aliceblue;
+    margin: 20px;
+    
+    text-decoration: none;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer_nav ul li a:hover{
+    opacity: 1;
+}
+.footer_bottom{
+    background-color: rgb(0, 103, 103);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    bottom: 0px;
+    
+}
+.footer_bottom p{
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+
+
+
+/* styling som börjar gälla för skärmar med bredd 800px eller mer*/
+@media screen and (min-width: 800px) {
+    
+
+
+    #grid_wrapper_hem {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 600px 600px;
+        grid-template-areas: 
+        "se1 se1"
+        "se2 se2"
+        ;
+        
+    }
+    #bakgrundsbild_hem{
+        
+        grid-area: se1;
+        padding: auto;
+        background-color: rgb(0, 255, 255);
+        background-repeat: no-repeat;
+        background-image: url("/img/child_playing.jpg");
+        background-size: cover;
+        position: relative;
+    }
+
+/*------tags------------------------------------------------------------------------------------------------------*/
+
+    h1{
+    font-size: 4rem;
+    color: aliceblue;
+    font-weight: 540;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 60px;
+    padding-right: 250px;
+    
+}
+p{
+    padding-top: 20px;
+    font-size: 1.5rem;
+    color: aliceblue;
+    font-weight:400;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-right: 230px;
+    padding-left: 60px;
+    padding-right: 250px;
+}
+
+h2{
+    font-size: 3rem;
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+    .burger_line {
+        display: none;
+    }
+
+
+    #link_list {
+        display: flex;
+        position: absolute;
+        right: 40%;
+        top: -540px;
+        flex-direction: row;
+        height: 100px;
+    }
+    /*-----Styling klass-----------------------------------------------------------------*/
+
+    .footer_nav ul{
+        flex-direction: row;
+    }
+    .footer_nav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    
 }
