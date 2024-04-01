@@ -12,7 +12,7 @@
 #grid_wrapper_hem {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 600px 600px;
+    grid-template-rows: 400px 120px;
     grid-template-areas: 
     "se1 se1"
     "se2 se2"
@@ -20,12 +20,12 @@
     
 }
 #grid_wrapper_om_oss {
-display: grid;
-    grid-template-columns: minmax(auto, 1fr) auto;
-    grid-template-rows: 80px, 50px, 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px 750px;
     grid-template-areas: 
-    "se3 se3"
-    "se3 se3"
+    "se3 ar1"
+    "se5 se5"
     ;
 }
 /*---------nav---------------------------------------------------------------------------*/
@@ -81,44 +81,105 @@ nav {
 
 /*-----styling id----------------------------------------------------------------------*/ 
 
-#bakgrundsbild_hem{ 
+#bakgrundsbild_hem { 
     z-index: -1;
     grid-area: se1;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 300px;
-
+    right: 0px;
     background-color: rgb(163, 214, 214);
     background-repeat: no-repeat;
-    background-image: url("/img/child_playing.jpg");
+    
     background-size: cover;
     position: relative;
-    background-blend-mode: multiply;
+    
 }
 
-#nyheter{
+#nyheter {
     grid-area: se2;
-    padding-top: 100px;
-    padding-left: 80px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(150, 150, 255);
+    border-radius: 10px;
+    text-align: center;
+    
+    
+
 }
 
-#om_oss_info{
+#om_oss_mobile {
     grid-area: se3;
+    padding: 15px
+
+}
+#om_oss_image {
+    grid-area: ar1;
+    border: 1px;
+    right: 0px;
+    background-size: 100%;
+    background-image: url("../img/our_team.png");
+    background-repeat: no-repeat;
+    background-position: center 30%;
+}
+#hearing_info_mobile {
+    grid-area: se5;
+    padding: 15px;
+    padding-top: 50px;
 }
 
+#nyheter a {
+    grid-area: se2;
+    text-decoration: none;
+    
+    
+    
+
+}
+#nyheter a:hover {
+    text-decoration: underline;
+    color:aqua;
+}
 
 
 
 
 
 /*-----------Tags----------------------------------------------------------------------------------------*/
+h1{
+    padding-left: 20px;
+    color:aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#p1{
+    color: aliceblue;
+    padding-top: 20px;
+    padding-left: 20px;
+    
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+    padding: 10px;
+}
+h3{
+    padding: 20px;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#p2{
+    
+    font-size: 0.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
 
 
-
-
-
-
-/*----Hamburgermenyn-------------------------------------------------------------------------------------*/ 
+/*----Hamburgermenyn----------------------------------------------------------------*/ 
 .burger_line {
     width: var(--burgerline_width);
     height: var(--burgerline_height);
@@ -144,16 +205,18 @@ nav {
     margin-right: 40px;
     cursor: pointer;
 }
-/*-----Styling klass-----------------------------------------------------------------*/
+/*-----Styling klass-------------------------------------------------------------*/
 .footer{
     background-color: teal;
     width: 100%;
+    
     
     
 }
 
 .footer_nav{
     margin: 30px;
+    padding-top: 10px;
     
 }
 
@@ -174,13 +237,16 @@ nav {
     opacity: 0.7;
     transition: 0.5s;
 }
+.footer_list{
+    margin-top: 20px;
+}
 
 .footer_nav ul li a:hover{
     opacity: 1;
 }
 .footer_bottom{
     background-color: rgb(0, 103, 103);
-    text-align: center;
+    text-align: left;
     padding-top: 30px;
     padding-bottom: 30px; 
     bottom: 0px;
@@ -189,6 +255,7 @@ nav {
 .footer_bottom p{
     font-size: 1rem;
     color: aliceblue;
+    padding-left: 20px;
 }
 
 
@@ -202,22 +269,33 @@ nav {
     #grid_wrapper_hem {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 600px 600px;
+        grid-template-rows: 600px 150px;
         grid-template-areas: 
         "se1 se1"
         "se2 se2"
         ;
         
     }
+    #grid_wrapper_om_oss {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 640px 750px;
+        grid-template-areas: 
+        "se3 ar1"
+        "se5 se5"
+        ;
+    }
     #bakgrundsbild_hem{
         
         grid-area: se1;
         padding: auto;
+        right: 0px;
         background-color: rgb(0, 255, 255);
         background-repeat: no-repeat;
         background-image: url("/img/child_playing.jpg");
         background-size: cover;
         position: relative;
+        
     }
 
 /*------tags------------------------------------------------------------------------------------------------------*/
@@ -231,15 +309,28 @@ nav {
     padding-right: 250px;
     
 }
-p{
+#p1{
     padding-top: 20px;
     font-size: 1.5rem;
     color: aliceblue;
     font-weight:400;
     font-family:Arial, Helvetica, sans-serif;
-    padding-right: 230px;
+    padding-right: 450px;
     padding-left: 60px;
-    padding-right: 250px;
+    
+    
+}
+#p2{
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+h3{
+    padding: 20px;
+    font-size: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h2{
@@ -272,5 +363,20 @@ h2{
         text-align: center;
         margin: 10px;
     }
+    /*------Styling id------------------------------------------------------*/
+
+    #nyheter a{
+        grid-area: se2;
+        text-decoration: none;
+        
+        
+        
+    
+    }
+    #nyheter a:hover {
+        text-decoration: underline;
+        color:aqua;
+    }
+    
     
 }
