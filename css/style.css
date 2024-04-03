@@ -8,7 +8,7 @@
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
 }
-/*-----grid-wrapper-Desktop------------------------------------------------------------------------------*/
+/*-----grid-wrapper-mobile------------------------------------------------------------------------------*/
 #grid_wrapper_hem {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,13 +22,26 @@
 #grid_wrapper_om_oss {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 600px 750px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "se3 ar1"
     "se5 se5"
     ;
 }
-/*---------nav---------------------------------------------------------------------------*/
+#grid_wrapper_nyheter{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 3fr 3fr ;
+    grid-template-areas: 
+    "se6"
+    "ny1"
+    "ny2"
+    "ny3"
+    
+    ;
+
+}
+/*---------nav--header-------------------------------------------------------------------------*/
 nav {
     height: 100px;
     background-color: var(--background_color);
@@ -37,6 +50,7 @@ nav {
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(0, 188, 188);
+    
 }
 
 /*------link list---------------------------------------------------------*/
@@ -53,6 +67,7 @@ nav {
     list-style: none;
     transition: all 0.5s;
     background-color: rgb(0, 188, 188);
+    
 }
 
 .links_visible {
@@ -80,6 +95,39 @@ nav {
 
 
 /*-----styling id----------------------------------------------------------------------*/ 
+
+#nyheter_rubrik{
+    grid-area: se6;
+    font-size: 3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+}
+#nyhet1{
+    grid-area: ny1;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    margin: 10px;
+    
+}
+#nyhet2{
+    grid-area: ny2;
+    padding: 20px;
+    background-color: antiquewhite;
+    margin: 10px;
+    border-radius: 15px;
+}
+#nyhet3{
+    grid-area: ny3;
+    padding: 20px;
+    background-color: antiquewhite;
+    margin: 10px;
+    border-radius: 15px;
+}
+#nyhetstext{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+}
 
 #bakgrundsbild_hem { 
     z-index: -1;
@@ -206,6 +254,14 @@ h3{
     cursor: pointer;
 }
 /*-----Styling klass-------------------------------------------------------------*/
+
+.nyhet_img{
+    size: contain;
+    max-width: 100%;
+    object-fit: contain;
+    
+}
+/*---------------footer------------------------------------------------------------*/
 .footer{
     background-color: teal;
     width: 100%;
@@ -261,10 +317,10 @@ h3{
 
 
 
-/* styling som börjar gälla för skärmar med bredd 800px eller mer*/
+/* styling som börjar gälla för skärmar med bredd 800px eller mer------(desktop)*/
 @media screen and (min-width: 800px) {
     
-
+/*------Grid wrappers-------------------------------------------------*/
 
     #grid_wrapper_hem {
         display: grid;
@@ -285,18 +341,20 @@ h3{
         "se5 se5"
         ;
     }
-    #bakgrundsbild_hem{
+    #grid_wrapper_nyheter{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: 
+        "se6 se6 se6se6"
+        "ny1 ny2 ny3"
         
-        grid-area: se1;
-        padding: auto;
-        right: 0px;
-        background-color: rgb(0, 255, 255);
-        background-repeat: no-repeat;
-        background-image: url("/img/child_playing.jpg");
-        background-size: cover;
-        position: relative;
-        
+        ;
+    
     }
+
+    
+    
 
 /*------tags------------------------------------------------------------------------------------------------------*/
 
@@ -343,6 +401,7 @@ h2{
     .burger_line {
         display: none;
     }
+    
 
 
     #link_list {
@@ -353,6 +412,8 @@ h2{
         flex-direction: row;
         height: 100px;
     }
+
+    
     /*-----Styling klass-----------------------------------------------------------------*/
 
     .footer_nav ul{
@@ -364,7 +425,18 @@ h2{
         margin: 10px;
     }
     /*------Styling id------------------------------------------------------*/
-
+    #bakgrundsbild_hem{
+        
+        grid-area: se1;
+        padding: auto;
+        right: 0px;
+        background-color: rgb(0, 255, 255);
+        background-repeat: no-repeat;
+        background-image: url("/img/child_playing.jpg");
+        background-size: cover;
+        position: relative;
+        
+    }
     #nyheter a{
         grid-area: se2;
         text-decoration: none;
@@ -376,6 +448,40 @@ h2{
     #nyheter a:hover {
         text-decoration: underline;
         color:aqua;
+    }
+    #nyheter_rubrik{
+        grid-area: se6;
+        font-size: 4rem;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 20px;
+        padding-top: 40px;
+        padding-left: 40px;
+    }
+    #nyhet1{
+        grid-area: ny1;
+        padding: 20px;
+        background-color: antiquewhite;
+        border-radius: 15px;
+        margin: 10px;
+        
+    }
+    #nyhet2{
+        grid-area: ny2;
+        padding: 20px;
+        background-color: antiquewhite;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    #nyhet3{
+        grid-area: ny3;
+        padding: 20px;
+        background-color: antiquewhite;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    #nyhetstext{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8rem;
     }
     
     
