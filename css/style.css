@@ -135,7 +135,7 @@ nav {
     border-radius: 15px;
 }
 #nyhetstext{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 0.8rem;
 }
 
@@ -204,7 +204,7 @@ nav {
 
 #feedback_text{
     padding: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
     margin-bottom: 30px;
 }
@@ -214,7 +214,7 @@ nav {
 h1{
     padding-left: 20px;
     color:aliceblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #p1{
@@ -222,7 +222,7 @@ h1{
     padding-top: 20px;
     padding-left: 20px;
     
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -238,7 +238,7 @@ h3{
 #p2{
     
     font-size: 0.9rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -441,7 +441,7 @@ input{
     font-size: 4rem;
     color: aliceblue;
     font-weight: 540;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 60px;
     padding-right: 250px;
     
@@ -451,7 +451,7 @@ input{
     font-size: 1.5rem;
     color: aliceblue;
     font-weight:400;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-right: 450px;
     padding-left: 60px;
     
@@ -459,7 +459,7 @@ input{
 }
 #p2{
     font-size: 1.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     padding: 10px;
     padding-top: 40px;
     margin-bottom: 10px;
