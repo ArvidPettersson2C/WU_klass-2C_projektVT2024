@@ -147,7 +147,7 @@ nav {
     right: 0px;
     background-color: rgb(163, 214, 214);
     background-repeat: no-repeat;
-    
+    background-color: rgb(0, 110, 110);
     background-size: cover;
     position: relative;
     
@@ -556,11 +556,12 @@ h2{
         grid-area: se1;
         padding: auto;
         right: 0px;
-        background-color: rgb(0, 255, 255);
+        background-color: rgb(47, 255, 255);
         background-repeat: no-repeat;
         background-image: url("/img/child_playing_homepage_img.jpg");
         background-size: cover;
         position: relative;
+        background-blend-mode: multiply;
         
     }
     #nyheter a{
