@@ -81,7 +81,7 @@ nav {
 }
 
 .links_visible {
-    transform: translateY(535px);
+    transform: translateY(536px);
 }
 
 #link_list a {
@@ -136,7 +136,7 @@ nav {
 }
 #nyhetstext{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 #bakgrundsbild_hem { 
@@ -272,6 +272,7 @@ input{
 #burger {
     margin-right: 40px;
     cursor: pointer;
+    display: block;
 }
 
 #kontakt_rubrik{
@@ -478,6 +479,7 @@ h2{
 }
 
 
+
     .burger_line {
         display: none;
     }
@@ -611,5 +613,8 @@ h2{
         font-size: 1.2rem;
     }
     
+    #burger{
+        display: none;
+    }
     
 }
