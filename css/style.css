@@ -490,9 +490,13 @@ h2{
         display: flex;
         position: absolute;
         right: 40%;
-        top: -540px;
+        top: -4px;
         flex-direction: row;
         height: 100px;
+    }
+
+    .links_visible {
+        transform: translateY(0px);
     }
 
     
@@ -521,7 +525,7 @@ h2{
     .kontakt_info{
         grid-area: se9;
         background-color: aliceblue;
-        border-radius: 5%;
+        border-radius: 20px;
         border-color: aliceblue;
         margin-bottom: -50px;
         z-index: -1;
