@@ -52,7 +52,7 @@
     ;
 }
 /*---------nav--header-------------------------------------------------------------------------*/
-nav {
+.header_nav {
     height: 100px;
     background-color: var(--background_color);
     display: flex;
@@ -134,7 +134,7 @@ nav {
     margin: 10px;
     border-radius: 15px;
 }
-#nyhetstext{
+.nyhetstext{
     font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
 }
@@ -175,7 +175,7 @@ nav {
     border: 1px;
     right: 0px;
     background-size: 100%;
-    background-image: url("../img/our_team.png");
+    background-image: url("/img/our_team.png");
     background-repeat: no-repeat;
     background-position: center 30%;
 }
@@ -235,7 +235,7 @@ h3{
     font-size: 2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#p2{
+.p2{
     
     font-size: 0.9rem;
     font-family: 'Times New Roman', Times, serif;
@@ -458,7 +458,7 @@ input{
     
     
 }
-#p2{
+.p2{
     font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
     padding: 10px;
@@ -608,7 +608,7 @@ h2{
         margin: 10px;
         border-radius: 15px;
     }
-    #nyhetstext{
+    .nyhetstext{
         font-family: 'Times New Roman', Times, serif;
         font-size: 1.2rem;
     }
